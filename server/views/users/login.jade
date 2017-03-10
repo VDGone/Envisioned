@@ -1,0 +1,55 @@
+extends ../shared/layout
+block main-content
+    .main-content
+        .main-content-form
+            .address
+                a(href="/home")
+                    | home 
+                span
+                    | >> user login
+            .login-register-content
+               #left
+                   .login-form
+                       form(method="post")
+                           p
+                               input(id="username" class="form-control" type="text" name="username" placeholder="Username")    
+                           p
+                               input(id="password" class="form-control" type="password" name="password" placeholder="Password")
+                           input(type="submit" class="btn btn-lg" value="Login")
+               .sidebar
+                   h4
+                       | Recent Posts
+                   .widget
+                       .widget-content
+                           ul
+                              li
+                                  | Make A Wish
+                              li
+                                  | The Morning Dew
+                              li
+                                  | Purple Haze
+                              li
+                                  | Bridge To Nowhere
+                              li
+                                  | The Lonely Ladybug
+                   h4
+                       | Recent Comments
+                   .widget
+                       .widget-content
+                           ul
+                              li
+                                  | New Theme: DeepFocus- Elegant Themes Blog on Purple Haze
+                              li
+                                  | Frankie on At vero eos et accusamus et iusto
+                              li
+                                  | Soviet on Urna eget erat non purus
+                              li
+                                  | Light on Neque porro quisquam est qui
+                              li
+                                  | Pesho on Aenean bibendum elementum pede
+                   h4
+                       | About Me
+                   .widget
+                       .widget-content
+                           p
+                               | Nam commodo dignissim felis vitae ullamcorper. Sed volutpat velit id purus bibendum placerat. Sed porta, nulla ac interdum ullamcorper, mi orci porta eros, nec commodo ligula dolor et arcu. Quisque ullamcorper enim vel tellus rhoncus et fermentum diam congue. Phasellus eu turpis lorem, id gravida nunc. In bibendum nulla vel quam pretium a fringilla erat ornare.

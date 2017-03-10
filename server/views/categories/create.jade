@@ -1,0 +1,55 @@
+extends ../shared/layout
+block main-content
+    .main-content
+            .shadow
+                .main-content-form
+                    .address
+                        a(href="/home")
+                            |home
+                        span
+                            | >> categories >> create
+                    .login-register-content
+                        #left
+                            .create-category-form
+                                form(method="post")
+                                    input(id="title" class="form-control" type="text" name="title" placeholder="Title")
+                                    input(id="picture" class="form-control" type="text" name="picture" placeholder="Picture")
+                                    textarea(id="description" class="form-control" type="text" name="description" placeholder="Description")
+                                    input(type="submit" class="btn btn-lg" value="submit")
+                        .sidebar
+                            h4
+                                | Recent Posts
+                            .widget
+                                .widget-content
+                                    ul
+                                       li
+                                           | Make A Wish
+                                       li
+                                           | The Morning Dew
+                                       li
+                                           | Purple Haze
+                                       li
+                                           | Bridge To Nowhere
+                                       li
+                                           | The Lonely Ladybug
+                            h4
+                                | Recent Comments
+                            .widget
+                                .widget-content
+                                    ul
+                                       li
+                                           | New Theme: DeepFocus- Elegant Themes Blog on Purple Haze
+                                       li
+                                           | Frankie on At vero eos et accusamus et iusto
+                                       li
+                                           | Soviet on Urna eget erat non purus
+                                       li
+                                           | Light on Neque porro quisquam est qui
+                                       li
+                                           | Pesho on Aenean bibendum elementum pede
+                            h4
+                                | About Me
+                            .widget
+                                .widget-content
+                                    p
+                                        | Nam commodo dignissim felis vitae ullamcorper. Sed volutpat velit id purus bibendum placerat. Sed porta, nulla ac interdum ullamcorper, mi orci porta eros, nec commodo ligula dolor et arcu. Quisque ullamcorper enim vel tellus rhoncus et fermentum diam congue. Phasellus eu turpis lorem, id gravida nunc. In bibendum nulla vel quam pretium a fringilla erat ornare.

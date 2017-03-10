@@ -1,0 +1,86 @@
+doctype
+html
+    head
+        title Envisioned
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+        link(rel="shortcut icon" type="/image/ico" href="/img/favicon.ico")
+    body
+        .container
+            #header
+                .navbar-collapse.collapse.row
+                .logo.col-sm-offset-3
+                    img(src="/img/Logo.png")
+                .nav#nav.col-sm-offset-3
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/") Home
+                        li
+                        if (currentUser)
+                            li
+                                a(href="/categories/create") New Category
+                        li
+                            a(href="/categories/public") Public
+                        li
+                            a(href="/blog") Blog
+                        li
+                            a(href="/support") Suppor
+                        li
+                            a(href="/help") Get a Quote
+                        li
+                            a(href="/location") Location
+                        li
+                            a(href="/support") Support Forumt
+                        if (currentUser)
+                            li
+                                a(href="/profile") #{currentUser.username}
+                            li
+                                a(href="/logout") Logout
+                        if (!currentUser)
+                            li
+                                a(href="/login") Login
+                            li
+                                a(href="/register") Join Today
+            .container
+                if (errorMessage)
+                    .alert.alert-danger #{errorMessage}
+        block main-content
+        .footer
+            #footer-top
+                #footer-top-content
+                     h4
+                         | About Us
+                     h4
+                         | Recent Comments
+                     h4
+                         | Custom Text Widget
+                     #left
+                         p#left
+                             | Maecenas ac nunc purus, et aliquam urna. Curabitur quis tellus vitae dolor tristique egestas. Fusce metus sem, accumsan vel auctor non, laoreet eget nulla. Donec lacinia elit ac nulla hendrerit at tincidunt justo facilisis. Praesent vel risus ut urna vestibulum fermentum. Pellentesque sollicitudin cursus blandit. In hac habitasse platea dictumst. Maecenas sed nulla sed lacus elementum dapibus. Praesent hendrerit semper tempor.
+                     #center
+                         p#center
+                             | Maecenas ac nunc purus, et aliquam urna. Curabitur quis tellus vitae dolor tristique egestas. Fusce metus sem, accumsan vel auctor non, laoreet eget nulla. Donec lacinia elit ac nulla hendrerit at tincidunt justo facilisis. Praesent vel risus ut urna vestibulum fermentum. Pellentesque sollicitudin cursus blandit. In hac habitasse platea dictumst. Maecenas sed nulla sed lacus elementum dapibus. Praesent hendrerit semper tempor.
+                     #right
+                         p#right
+                             | Maecenas ac nunc purus, et aliquam urna. Curabitur quis tellus vitae dolor tristique egestas. Fusce metus sem, accumsan vel auctor non, laoreet eget nulla. Donec lacinia elit ac nulla hendrerit at tincidunt justo facilisis. Praesent vel risus ut urna vestibulum fermentum. Pellentesque sollicitudin cursus blandit. In hac habitasse platea dictumst. Maecenas sed nulla sed lacus elementum dapibus. Praesent hendrerit semper tempor.
+            #footer-bottom
+                ul.my-nav
+                    li
+                        a(href="/") Home
+                    if(currentUser)
+                        li
+                            a(href="/Categories/create") New Category
+                    li
+                        a(href="/categories/public") Public
+                    li
+                        a(href="/about") About
+                    li
+                        a(href="/blog") Blog
+                    li
+                        a(href="/support") Support
+                    li
+                        a(href="/getquote") Get Quote
+                    .rights
+                        | &copy; WordPress
+        include scripts

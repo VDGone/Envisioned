@@ -1,0 +1,45 @@
+extends ../shared/layout
+block main-content
+    .main-content
+        .shadow
+            .main-content-form
+                .address
+                    a(href="/home")
+                        | home 
+                    span
+                        | >> user profile
+                .login-register-content
+                   #left
+                       .profile-form
+                           form(method="post")
+                               p
+                                   | Username: #{currentUser.username}
+                                   br
+                                   br
+                                   | E-mail: #{currentUser.email}
+                                   label(for="email")
+                                   input(id="email" class="form-control" type="email" name="email" placeholder="Email")
+                               p
+                                   br
+                                   | First Name: #{currentUser.firstName}
+                                   label(for="first-name") 
+                                   input(id="first-name" class="form-control" type="text" name="firstName" placeholder="First Name")
+                               p
+                                   br
+                                   | Last Name: #{currentUser.lastName}
+                                   label(for="last-name") 
+                                   input(id="last-name" class="form-control" type="text" name="lastName" placeholder="Last Name")
+                               p
+                                   br
+                                   | Facebook Account: #{currentUser.facebook}
+                                   label(for="facebook") 
+                                   input(id="facebook" class="form-control" type="text" name="Facebook" placeholder="Url")
+                               p
+                                   br
+                                   | Youtube Account: #{currentUser.youtube}
+                                   label(for="youtube") 
+                                   input(id="youtube" class="form-control" type="text" name="youtube" placeholder="Url")
+                               p
+                               input(type="submit" class="btn btn-lg" value="Change")
+                   #profile-img
+                       img(src="#{currentUser.profilePicture}" class="user-profile-picture")

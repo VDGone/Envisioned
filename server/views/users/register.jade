@@ -1,0 +1,78 @@
+extends ../shared/layout
+block main-content
+    .main-content
+        .shadow
+            .main-content-form
+                .address
+                    a(href="/home")
+                        | home 
+                    span
+                        | >> user register
+                .login-register-content
+                   #left
+                       .register-form
+                           form(method="post")
+                               p
+                                   input(id="email" class="form-control" type="email" name="email" placeholder="E-mail")
+                               p
+                                   label(for="username")
+                                   input(id="username" class="form-control" type="text" name="username" placeholder="Username")
+                               p
+                                   label(for="password")
+                                   input(id="password" class="form-control" type="password" name="password" placeholder="Password")
+                               p
+                                   label(for="confirm-password")
+                                   input(id="confirm-password" class="form-control" type="password" name="confirmPassword" placeholder="Confirm password")
+                               p
+                                   label(for="first-name")
+                                   input(id="first-name" class="form-control" type="text" name="firstName" placeholder="First Name")
+                               p
+                                   label(for="last-name")
+                                   input(id="last-name" class="form-control" type="text" name="lastName" placeholder="Last Name")
+                               p
+                                   label(for="facebook")
+                                   input(id="facebook" class="form-control" type="text" name="Facebook" placeholder="Facebook profile")
+                               p
+                                   label(for="youtube")
+                                   input(id="youtube" class="form-control" type="text" name="youtube" placeholder="Youtube profile")
+                               p
+                                   label(for="profile-picture")
+                                   input(id="profile-picture" class="form-control" type="text" name="profile-picture" placeholder="Profile Picture")
+                               input(type="submit" class="btn btn-lg" value="Register")
+                   .sidebar
+                       h4
+                           | Recent Posts
+                       .widget
+                           .widget-content
+                               ul
+                                  li
+                                      | Make A Wish
+                                  li
+                                      | The Morning Dew
+                                  li
+                                      | Purple Haze
+                                  li
+                                      | Bridge To Nowhere
+                                  li
+                                      | The Lonely Ladybug
+                       h4
+                           | Recent Comments
+                       .widget
+                           .widget-content
+                               ul
+                                  li
+                                      | New Theme: DeepFocus- Elegant Themes Blog on Purple Haze
+                                  li
+                                      | Frankie on At vero eos et accusamus et iusto
+                                  li
+                                      | Soviet on Urna eget erat non purus
+                                  li
+                                      | Light on Neque porro quisquam est qui
+                                  li
+                                      | Pesho on Aenean bibendum elementum pede
+                       h4
+                           | About Me
+                       .widget
+                           .widget-content
+                               p
+                                   | Nam commodo dignissim felis vitae ullamcorper. Sed volutpat velit id purus bibendum placerat. Sed porta, nulla ac interdum ullamcorper, mi orci porta eros, nec commodo ligula dolor et arcu. Quisque ullamcorper enim vel tellus rhoncus et fermentum diam congue. Phasellus eu turpis lorem, id gravida nunc. In bibendum nulla vel quam pretium a fringilla erat ornare.
